@@ -12,14 +12,19 @@ cask "portman" do
 
   app "Portman.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/Portman.app"]
+  end
+
   zap trash: [
     "~/.local/share/portman",
   ]
 
   caveats <<~EOS
-    Portman is not signed. On first launch:
-    1. Right-click on Portman.app
-    2. Select "Open"
-    3. Click "Open" in the dialog
+    Portman is not signed with an Apple Developer certificate.
+    The quarantine attribute has been removed automatically.
+    If macOS still shows a warning, run:
+      xattr -cr /Applications/Portman.app
   EOS
 end
