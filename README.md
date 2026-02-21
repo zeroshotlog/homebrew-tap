@@ -18,9 +18,18 @@ Local port management tool for macOS.
 brew install --cask portman
 ```
 
+### Orchestra
+
+AI coding agent session monitor for macOS.
+
+```bash
+brew install --cask orchestra
+```
+
 ## Updating
 
 ```bash
 brew update
 brew upgrade --cask portman
+brew upgrade --cask orchestra
 ```
