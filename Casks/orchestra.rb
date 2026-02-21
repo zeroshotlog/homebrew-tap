@@ -1,6 +1,6 @@
 cask "orchestra" do
   version "0.1.0"
-  sha256 "PLACEHOLDER_UPDATE_AFTER_FIRST_RELEASE"
+  sha256 "9546fa8ed9461f3c3d48109731916ed69296ac1df8e79657379e16f184f4febc"
 
   url "https://github.com/zeroshotlog/orchestra/releases/download/v#{version}/Orchestra_#{version}_aarch64.dmg"
   name "Orchestra"
